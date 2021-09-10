@@ -1,13 +1,14 @@
 # Let's Get a Website Up and Running
 
-## Sign Up for a Github Account
+## Github
+### Sign Up for an Account
 Go to https://github.com and sign up for a new account. You will receive an email with confirmation code that is required in order to complete registration.
 ![Image1](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/00-github-signup.png)
 
 When asked about your role, select just yourself as a student. When asked about additional plugins, select skip personalization.
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/01-github-questions.png)
 
-## Create Website Repository
+### Create Website Repository
 Once you complete registration, next we'll continue to create a repository where we'll store files pertaining to our website.
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/02-github-new-repo.png)
 
@@ -16,7 +17,7 @@ Here's a preview of repository details
 
 After the repo has been created, next we will add specific files that make a website run. We'll discuss in deeper detail these files as well.
 
-## Website Basics
+### Website Basics
 A website is built on a web server. The minimal programming needed to start up a server is as follows:
 
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-index.png)
@@ -54,3 +55,45 @@ After we define a website, we then need to define the package manager file that 
   "dependencies": { }
 }
 ```
+
+Heroku is the platform that facilitates hosting, and also comes with it's own script to know what to launch.
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-procfile.png" />
+
+
+```
+web: node index.js
+
+```
+
+Here we see the list of files we have on our repo. Your own should look the same:
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-repo-files.png" />
+
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/06-heroku-signup.png" />
+
+## Heroku
+### Sign Up for an Account
+Go to https://heroku.com and sign up for a new account. You will receive an email with confirmation code that is required in order to complete registration.
+![Image1](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/07-heroku-signup.png)
+
+Next, start a new app:
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/07-heroku-new-app.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/08-heroku-new-app-review.png" />
+
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/09-heroku-deployment-github.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/10-authorize-heroku-to-your-github.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/11-search-your-repo-in-github-and-connect.png" />
+
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/12-auto-manual-deploy.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/13-deploy-successful.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/14-heroku-app-preview.png" />
