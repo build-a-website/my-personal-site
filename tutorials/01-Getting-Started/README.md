@@ -3,6 +3,7 @@
 ## Github
 ### Sign Up for an Account
 Go to https://github.com and sign up for a new account. You will receive an email with confirmation code that is required in order to complete registration.
+
 ![Image1](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/00-github-signup.png)
 
 When asked about your role, select just yourself as a student. When asked about additional plugins, select skip personalization.
