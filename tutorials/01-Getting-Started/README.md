@@ -131,3 +131,5 @@ After deployment completes, you will see a success message along with a link to 
 When you click the link to view your app, it should open up a new tab showing you the single message you defined for all server routes.
 
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/14-heroku-app-preview.png" />
+
+### Congratulations! You have now created a repository for your website, defined package manager, and setup pipeline for deployments. You may proceed to review additional tips, and then go to Unit 2 where we will introduce a server library for greater productivity.
