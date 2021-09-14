@@ -102,7 +102,7 @@ Next, start a new app. Heroku allows free hosting with the condition that your s
 
 Enter a unique app name, find one available.
 
-<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/08-heroku-new-app-review.png" />
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/08-heroku-new-app-preview.png" />
 
 ### Connect Github Repository 
 Navigate to the `Deploy` tab, then in `Deployment method` select `Github`. Lastly, click the `Connect to Github` button.
