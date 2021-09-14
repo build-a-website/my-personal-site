@@ -2,5 +2,7 @@
   "name": "my-personal-site",
   "version": "1.0.0",
   "description": "",
-  "dependencies": { }
+  "dependencies": { 
+    "@hapi/hapi": "20.1.5"
+  }
 }
