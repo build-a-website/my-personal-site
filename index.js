@@ -2,7 +2,7 @@
 
 const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
-
+const Path = require('path');
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
