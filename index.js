@@ -15,17 +15,17 @@ const server = Hapi.server({
         }
 });
 
-server.route({
-    method: 'GET',
-    path: '/{any*}',
-    handler: {
-        directory: {
-            path: 'static'
+server.register(require('@hapi/inert')).then( () => {
+    server.route({
+        method: 'GET',
+        path: '/{any*}',
+        handler: {
+            directory: {
+                path: 'static'
+            }
         }
-    }
-});
+    });
 
-server.register([require('@hapi/inert'), require('@hapi/hoek')]).then( () => {
     server.start().then( server => {
         console.log('Server running on %s', server.info.uri);
     });    
