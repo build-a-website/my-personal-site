@@ -7,10 +7,12 @@ Go to https://github.com and sign up for a new account. You will receive an emai
 ![Image1](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/00-github-signup.png)
 
 When asked about your role, select just yourself as a student. When asked about additional plugins, select skip personalization.
+
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/01-github-questions.png)
 
 ### Create Website Repository
 Once you complete registration, next we'll continue to create a repository where we'll store files pertaining to our website.
+
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/02-github-new-repo.png)
 
 Here's a preview of repository details
