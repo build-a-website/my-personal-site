@@ -14,7 +14,7 @@ const server = Hapi.server({
             }
         }
 });
-
+server.register(require('@hapi/inert'));
 server.route({
     method: 'GET',
     path: '/{any*}',
