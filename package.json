@@ -4,6 +4,7 @@
   "description": "",
   "dependencies": { 
     "@hapi/hapi": "20.1.5",
-    "@hapi/inert": "6.0.4"
+    "@hapi/inert": "6.0.4",
+    "@hapi/hoek": "9.2.0"
   }
 }
