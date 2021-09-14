@@ -26,8 +26,8 @@ server.register(require('@hapi/inert')).then( () => {
         }
     });
 
-    server.start().then( s => {
-        console.log('Server running on %s', s.info.uri);
+    server.start().then( server => {
+        console.log('Server running on %s', server.info.uri);
     });    
 });
 
