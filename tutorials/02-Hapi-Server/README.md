@@ -1,5 +1,5 @@
 # Leverage HapiJS Server Framework
-For this unit, we will continue to configure our server, and we will upgrade to [HapiJS](https://hapi.dev/tutorials/) in order to leverage greater productivity.
+For this unit, we will continue to configure our server, and we will upgrade to [HapiJS](https://hapi.dev/) in order to leverage greater productivity.
 
 Installing HapiJS will consist of adding the dependency to the **package.json**, you can proceed to modify your package manager file as follows:
 
@@ -30,7 +30,7 @@ const server = Hapi.server({
   
 server.route({
     method: 'GET',
-    path: '/',
+    path: '/{any*}',
     handler: (request, h) => {
         return 'Hola Mundo!';
     }
@@ -45,4 +45,5 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
 });
 ```
+
 
