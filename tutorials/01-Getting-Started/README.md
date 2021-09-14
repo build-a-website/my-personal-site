@@ -82,7 +82,7 @@ web: node index.js
 ```
 
 ### Summary
-Here we see the list of files we have on our repo. Your own should look the same, we have the **index.js** file which is our server, the **package.json** which stores information about the project, particularly on the package manager dependencies, and lastly the **Procfile** which is used by Heroku to launch your server.
+Here we see the list of files we have on our repo. Your own should look the same, we have the **index.js** file which is our server, the **package.json** which stores information about the project, particularly on the package manager dependencies, and lastly the **Procfile** which is used by Heroku to launch your server. The other file **LICENSE** is to label this repository as open source under the MIT license which means you welcome sharing the code base for others to use without any liability.
 
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-repo-files.png" />
 
