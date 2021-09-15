@@ -132,4 +132,4 @@ When you click the link to view your app, it should open up a new tab showing yo
 
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/14-heroku-app-preview.png" />
 
-### Congratulations! You have now created a repository for your website, defined package manager, and setup pipeline for deployments. You may proceed to review additional tips, and then go to Unit 2 where we will introduce a server library for greater productivity.
+### Congratulations! You have now created a repository for your website, defined package manager, and setup pipeline for deployments. You may proceed to review additional [tips](https://github.com/build-a-website/my-personal-site/blob/main/tutorials/01-Getting-Started/tips.md), and then go to [Unit 2](https://github.com/build-a-website/my-personal-site/blob/main/tutorials/02-Hapi-Server/README.md) where we will introduce a server library for greater productivity.

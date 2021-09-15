@@ -154,4 +154,4 @@ document.body.appendChild( bootScript );
 
 At this stage, we now have a static content server which we can create content directly into HTML files, and leverage styling and scripts from Bootstrap to quickly build a website. To show that your static content site is working correctly, you will need to inspect network traffic and ensure you the see the following.
 
-<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/02-Hapu-Server/images/HapiJS-static-content.png" />
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/02-Hapi-Server/images/HapiJS-static-content.png" />
