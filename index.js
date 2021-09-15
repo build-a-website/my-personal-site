@@ -10,7 +10,7 @@ const server = Hapi.server({
     host: hostname,
     routes: {
             files: {
-                relativeTo: Path.join(__dirname, 'static')
+                relativeTo: Path.join(__dirname)
             }
         }
 });
@@ -18,16 +18,24 @@ const server = Hapi.server({
 server.register(require('@hapi/inert')).then( () => {
     server.route({
         method: 'GET',
+        path: '/hello',
+        handler: (req) => {
+            return 'Hello';
+        }
+    });
+
+    server.route({
+        method: 'GET',
         path: '/{any*}',
         handler: {
             directory: {
-                path: 'static'
+                path: ['public']
             }
         }
     });
 
-    server.start().then( server => {
-        //console.log('Server running on %s', server.info.uri);
+    server.start().then( () => {
+        console.log('Server running on %s', server.info.uri);
     });    
 });
 
