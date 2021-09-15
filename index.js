@@ -16,20 +16,14 @@ const server = Hapi.server({
 });
 
 server.register(require('@hapi/inert')).then( () => {
-    server.route({
-        method: 'GET',
-        path: '/hello',
-        handler: (req) => {
-            return 'Hello';
-        }
-    });
 
     server.route({
         method: 'GET',
         path: '/{any*}',
         handler: {
             directory: {
-                path: ['public']
+                path: ['public'],
+                index: ['index.html']
             }
         }
     });
