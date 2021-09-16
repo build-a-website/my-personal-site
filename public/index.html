@@ -1,12 +1,69 @@
 <html>
     <head>
         <title>Hola!</title>
-        <link href="style.css" rel="stylesheet"/>
+        <link href="/style.css" rel="stylesheet"/>
     </head>
 
     <body>
-        <my-custom-menu></my-custom-menu>
-        <h1>Hola!</h1>
+        <div class="container">
+            <top-menu></top-menu>
+            <div class="alert alert-info m-0" role="alert">
+                County Fair is coming! October 1-3, 2021
+            </div>
+            <div class="alert alert-warning" role="alert">
+                ENTRIES CLOSE THURSDAY SEPTEMBER 9, 2021
+            </div>
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/cMrsH78gDWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Schedules
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">Daily schedules help you and your family have fun at the Fair! Plan the shows and exhibits you want to see.</p>
+                          <a href="/schedules/" class="btn btn-outline-dark">Go to Schedules</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        <div class="card-header">
+                          Entertainment
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">The County Fair continues the tradition of good, old fashioned family entertainment offered each year.</p>
+                          <a href="/entertainment/" class="btn btn-outline-dark">Go to Entertainment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h3>Our Event Sponsors</h3>
+                <p>Thanks to our sponsors who make the Fair possible!</p>
+            </div>
+            <div class="row mb-5">
+                <div class="col">
+                    <a href="https://www.pge.com/" target="_blank">
+                        <img src="https://www.sanbenitocountyfair.com/wp-content/uploads/2018/09/pge-kids-day-sponsor-e1536378979450.png" />
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.runningrooster.com/" target="_blank">
+                        <img src="https://static.wixstatic.com/media/9b5ff2_6aadee720d66460da99af35ffc5f2d6a~mv2.png/v1/fill/w_412,h_218,al_c,q_85,usm_0.66_1.00_0.01/Full%20Oval%20Transparent%20Back.webp" />
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://king-brand.com/" target="_blank">
+                        <img src="https://www.sanbenitocountyfair.com/wp-content/uploads/2019/04/king-feed-logo-sponsor.png" />
+                    </a>
+                </div>
+            </div>
+
+            <bottom-menu></bottom-menu>
+        </div>
     </body>
     <script type="application/javascript" src="/script.js"></script>
 </html>

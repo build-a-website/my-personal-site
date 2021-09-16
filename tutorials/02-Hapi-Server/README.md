@@ -121,7 +121,7 @@ Now, let's setup our `index.html` as follows:
         <!-- THIS IS A COMMENT; MORE OF THESE FOR GUIDANCE-->
         <title>Hola!</title>
         <!-- Below we include the stylesheet file with css extension -->
-        <link href="style.css" rel="stylesheet"/>
+        <link href="/style.css" rel="stylesheet"/>
     </head>
 
     <body>

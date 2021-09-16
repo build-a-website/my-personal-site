@@ -21,6 +21,15 @@ Here is a simple flow to create a new file, save/commit using git, then push up 
 
 ![Image](https://github.com/build-a-website/my-personal-site/blob/main/tutorials/01-Getting-Started/images/tips-4-git.png)
 
+Lastly, we recommend creating a `.gitignore` file, and add the following
+
+```
+node_modules
+package-lock.json
+```
+
+this will ensure you ignore node modules from being added to github, and keep the code base size small to comply with Heroku's limits. These modules are automatically installed when deployed, so no need to save them since their reference is found in `package.json`. As you add other sensitive files in your local development, it will be important to ignore them so that sensitive information such as passwords do not make their way into public sites.
+
 ### Support
 The local development setup may prove to be toughest challenge, but once you get it right, it will save you alot of time because you will iterate quickly to build new features. If you get stuck, please send email to `rjezuz` at gmail dot com, and reference this micro-course to quickly setup a debugging session over Zoom.
 
