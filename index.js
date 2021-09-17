@@ -13,7 +13,7 @@ const server = Hapi.server({
         }
 });
 
-server.register(require('@hapi/inert')).then( () => {
+server.register( require('@hapi/inert') ).then( () => {
 
     server.route({
         method: 'GET',
@@ -21,7 +21,8 @@ server.register(require('@hapi/inert')).then( () => {
         handler: {
             directory: {
                 path: ['public'],
-                index: ['index.html']
+                index: ['index.html'],
+                defaultExtension: 'html'
             }
         }
     });
