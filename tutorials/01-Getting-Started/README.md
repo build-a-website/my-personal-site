@@ -21,7 +21,7 @@ Here's a preview of repository details
 
 After the repo has been created, next we will add specific files that make a website run. We'll discuss in deeper detail these files as well.
 
-### Web Server Basics
+### Hapi Server Basics
 A website is built on a web server. The minimum software code needed to start up a server is as follows:
 
 ![Image](https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-index.png)
@@ -31,27 +31,47 @@ In your Github repo, go to  `Add file` > `Create new file`, then you will need t
 The code from the image above is shown below for easy copy/paste. 
 
 ```javascript
-const http = require('http');
-
+// Declare Server constants and modules
 const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
+const Path = require('path');
+const Hapi = require('@hapi/hapi');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hola Mundo!');
+// Create new instance of Hapi server
+const server = Hapi.server({
+    port: port,
+    host: hostname,
+    routes: {
+            files: {
+                relativeTo: Path.join(__dirname)
+            }
+        }
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+// Register @hapi/inert to serve static content
+server.register( require('@hapi/inert') ).then( () => {
+    // Add static content to be served from any number of directory paths, if only path specified we automatically serve index.html
+    server.route({
+        method: 'GET',
+        path: '/{any*}',
+        handler: {
+            directory: {
+                path: ['public'],
+                index: ['index.html'],
+                defaultExtension: 'html'
+            }
+        }
+    });
+
+    server.start().then( () => { console.log('Server running on %s', server.info.uri); });    
 });
+
+process.on('unhandledRejection', (err) => {
+    console.log(err);
+    process.exit(1);
+});
+
 ```
-
-We begin by including the `http` module to enable creation of a web server. In order to create a web server, we need to know two specific details about the configuration. The first is the hostname, or ip address, of the server. We use `0.0.0.0` in order to leave it open ended, and delegate the run-time environment to pickup its respective ip address. Next we have the port number, port number is like an apartment number to an address (ip address). We use `process.env.PORT` in order to delegate whatever port the run-time environment provides and a fallback to 3000 by using `||`.
-
-After we define hostname and port for the intial configuration, we configure the server with a single handler as follows `.createServer( (request, response) => { ... })`. This will be a catch all traffic call that takes in the `request` object with data coming from the client, and responds via the `response` object.
-
-Lastly, we then invoke the listener function where we pass in the port and hostname.
 
 ### NodeJS + NPM
 After we setup the server, we then need to define the package manager file which pertains to the NodeJS community. Node Package Manager (npm) is a community driven respository of trusted and vetted solutions/libraries that developers commonly leverage to achieve larger abstractions. We will leverage the HapiJS server framework in the next tutorial which will be store in the dependencies section. Using HapiJS will enable declarative server configurations with minimal overhead for increased productivity.
@@ -60,12 +80,15 @@ After we setup the server, we then need to define the package manager file which
 
 Similar to index.js file, create a new file called `package.json` and enter the following details for it.
 
-```
+```json
 {
   "name": "my-personal-site",
   "version": "1.0.0",
   "description": "",
-  "dependencies": { }
+  "dependencies": { 
+    "@hapi/hapi": "20.1.5",
+    "@hapi/inert": "6.0.4"
+  }
 }
 ```
 
@@ -81,11 +104,39 @@ web: node index.js
 
 ```
 
-### Summary
-Here we see the list of files we have on our repo. Your own should look the same, we have the **index.js** file which is our server, the **package.json** which stores information about the project, particularly on the package manager dependencies, and lastly the **Procfile** which is used by Heroku to launch your server. The other file **LICENSE** is to label this repository as open source under the MIT license which means you welcome sharing the code base for others to use without any liability.
-
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/01-Getting-Started/images/05-github-repo-files.png" />
 
+### HTML Content
+Now we will create a folder called `public`, and inside add an `index.html`. The file contents are below:
+
+```html
+<!-- public/index.html -->
+<html>
+    <head>
+        <!-- THIS IS A COMMENT; MORE OF THESE FOR GUIDANCE-->
+        <title>Hola!</title>
+        <!-- Below we include the stylesheet file with css extension -->
+        <link href="/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <!-- Quick Message -->
+        <h1>Hola!</h1>
+    </body>
+</html>
+```
+Similarly, we will setup our stylesheet file which will include the popular [Bootstrap](https://getbootstrap.com/) framework.
+
+```css
+/* public/style.css */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+/* below our import we can override anything we please */
+```
+
+### Summary
+Your repo is now ready, you have the static server configured, and two static files ready to be served. Next, we will look at hosting setup via Heroku.
 
 ## Heroku
 ### Sign Up for an Account

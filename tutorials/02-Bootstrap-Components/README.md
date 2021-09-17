@@ -1,0 +1,362 @@
+# Bootstrap Web Components
+
+```html
+<html>
+    <head>
+        <title>Country Fair</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <!-- NAVBAR https://getbootstrap.com/docs/5.0/components/navbar/ -->
+        <div class="container-fluid position-fixed p-0" style="z-index: 999;">
+            <nav id="navbar-example2" class="navbar navbar-expand-lg nav navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo" src="/assets/images/logo.png" height="60"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="#videos">Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#schedules">Schedules</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#entertainment">Entertainment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sponsors">Sponsors</a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Contact Us
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- SCROLLSPY https://getbootstrap.com/docs/5.0/components/scrollspy/ -->
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+         
+            <!-- CONTAINER https://getbootstrap.com/docs/5.0/layout/containers/ -->
+            <div class="container-fluid" style="padding-top: 100px;">
+
+                <!-- ALERT BANNER https://getbootstrap.com/docs/5.0/components/alerts/ -->
+                <div class="alert alert-secondary" role="alert">
+                    <div class="container">
+                        County Fair is coming! October 1-3, 2021 | ENTRIES CLOSE THURSDAY SEPTEMBER 9, 2021
+                        <button type="button" class="btn-close float-end" aria-label="Close"></button>
+                    </div>
+                </div>
+
+                <!-- CAROUSEL https://getbootstrap.com/docs/5.0/components/carousel/ -->
+                <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/images/carousel-1-bw.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/carousel-2-bw.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <section class="container">
+                <a id="videos">&nbsp;</a>
+                <div class="text-center" style="margin-top: 100px;">
+                    <!-- TYPOGRAPHY https://getbootstrap.com/docs/5.0/content/typography/ -->
+                    <h3 class="display-6">Videos</h3>
+                    <p class="lead">Watch some great video coverage at the country fair. We are sure you will love the fun and excitement at the fair. </p>
+                </div>
+                <!-- LAYOUT https://getbootstrap.com/docs/5.0/layout/grid/ -->
+                <div class="row mt-5">
+                    <div class="col">
+                        <iframe src="https://player.vimeo.com/video/276685961?h=d25a15727e" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="col">
+                        <iframe src="https://www.youtube.com/embed/cMrsH78gDWQ" width="100%" height="360" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <a id="schedules">&nbsp;</a>
+                <div class="text-center" style="margin-top: 100px;">
+                    <h3 class="display-6">Schedules</h3>
+                    <p class="lead">Catch all the fun and excitement, plan your day, and enjoy!</p>
+                </div>
+
+                <!-- TABLE https://getbootstrap.com/docs/5.0/content/tables/-->
+                <table class="table table-borderless table-striped align-middle">
+                    <thead>
+                    <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Location</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">01:00 PM</th>
+                        <td>Pig Races</td>
+                        <td>Sahara Tent</td>
+                        <td>
+                            <!-- BADGE https://getbootstrap.com/docs/5.0/components/badge/ -->
+                            <span class="badge bg-success">Free</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">02:00 PM</th>
+                        <td>Truck Pulls</td>
+                        <td>Yuma Venue</td>
+                        <td><button type="button" class="btn btn-primary btn-sm">Tickets</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">03:00 PM</th>
+                        <td>Livestock Auction</td>
+                        <td>Mojave Tent</td>
+                        <td><button type="button" class="btn btn-primary btn-sm">Tickets</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">04:00 PM</th>
+                        <td>Art Contest</td>
+                        <td>Sonora Tent</td>
+                        <td><span class="badge bg-success">Free</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="container">
+                <a id="entertainment">&nbsp;</a>
+                <div class="text-center" style="margin-top: 100px;">
+                    <h3 class="display-6">Entertainment</h3>
+                    <p class="lead">Catch all the fun and excitement, plan your day, and enjoy!</p>
+                </div>
+
+                <!-- LAYOUT https://getbootstrap.com/docs/5.0/layout/grid/ -->
+                <div class="row mt-5">
+                    <div class="col">
+                        <!-- CARDS https://getbootstrap.com/docs/5.0/components/card/ -->
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Miniature Golf</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Spin Zone</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Bumper Cars</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Go-Karts</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Laser Frontier</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/assets/images/card-1-bw.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Arcade</h5>
+                                <p class="card-text">Enjoy the variety of challenging obstacles presented at each.</p>
+                                <a href="#" class="btn btn-primary">More Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <a id="sponsors">&nbsp;</a>
+                <div class="text-center" style="margin-top: 100px;">
+                    <h3 class="display-6">Event Sponsors</h3>
+                    <p class="lead">Thanks to our sponsors who make the Fair possible!</p>
+                </div>
+                <div class="row mb-5">
+                    <div class="col">
+                        <a href="https://www.pge.com/" target="_blank">
+                            <img src="/assets/images/card-2-bw.png" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.pge.com/" target="_blank">
+                            <img src="/assets/images/card-2-bw.png" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.pge.com/" target="_blank">
+                            <img src="/assets/images/card-2-bw.png" />
+                        </a>
+                    </div>
+                </div>
+            </section>    
+        </div>
+
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row pt-5 pb-5">
+                    <div class="col">
+                        <p class="lead">
+                            Links
+                        </p>
+                        <p><a class="text-reset" href="#videos">Videos</a></p>
+                        <p><a class="text-reset" href="#schedules">Schedules</a></p>
+                        <p><a class="text-reset" href="#entertainment">Entertainment</a></p>
+                        <p><a class="text-reset" href="#sponsors">Sponsors</a></p>
+                    </div>
+                    <div class="col">
+                        <p class="lead">
+                            Find Us
+                        </p>
+                        <p><a href="https://g.page/countryfairpark?share" target="_blank" class="text-reset">Google Maps</a></p>
+                        <p><a href="" class="text-reset" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact Us</a></p>
+                    </div>
+            
+                    <div class="col">
+                        <p class="lead">
+                            Country Fair Entertainment Park
+                        </p>
+                        <p class="lead text-center">
+                            3351 Route 112, <br/>
+                            Medford NY 11763
+                        </p>
+                        <p class="text-center"><a class="text-reset" href="mailto:info@countryfairpark.com">info@countryfairpark.com</a></p>
+                        <p class="text-center"><a class="text-reset" href="tel:5555555555">555-555-5555</a></p>
+                    </div>
+                    
+                    <div class="col align-middle">
+                        <p class="lead text-center">Follow Us</p>
+                        <div class="text-center">
+                            <a class="text-reset" href="https://facebook.com" target="_blank"><i class="bi-facebook btn-lg" role="img"></i></a>
+                            <a class="text-reset" href="https://twitter.com" target="_blank"><i class="bi-twitter btn-lg" role="img"></i></a>
+                            <a class="text-reset" href="https://youtube.com" target="_blank"><i class="bi-youtube btn-lg" role="img"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-2 bg-secondary text-light">
+                &copy; Country Fair Entertainment Park 2021. All Rights Reserved.
+            </div>
+        </footer>
+
+        <!-- MODAL https://getbootstrap.com/docs/5.0/components/modal/ -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- FORMS https://getbootstrap.com/docs/5.0/forms/overview/ -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+```
+
+## Images
+Now, we will add a couple images to go with our site. You will need to create a folder under `public` called `assets`, then underneath another folder called `images`, finally under images we will add the following.
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/card-1-bw.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/card-2-bw.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-1-bw.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-2-bw.png" />
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/logo.png" />
+
+
+## Country Fair Website
+
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/tutorials/02-Bootstrap-Components/images/02-country-fair.png" />
