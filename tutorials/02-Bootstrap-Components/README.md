@@ -346,13 +346,13 @@
 ## Images
 Now, we will add a couple images to go with our site. You will need to create a folder under `public` called `assets`, then underneath another folder called `images`, finally under images we will add the following.
 
-<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/card-1-bw.png" />
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/card-1-bw.jpg" />
 
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/card-2-bw.png" />
 
-<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-1-bw.png" />
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-1-bw.jpg" />
 
-<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-2-bw.png" />
+<img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/carousel-2-bw.jpg" />
 
 <img src="https://raw.githubusercontent.com/build-a-website/my-personal-site/main/public/assets/images/logo.png" />
 
